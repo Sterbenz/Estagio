@@ -22,7 +22,7 @@ namespace CaixaEletronico
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.ListaConta  = new Conta[2];
+            this.ListaConta  = new Conta[5];
 
             Conta conta1 = new Conta();
             conta1.titularCartao = new Cliente();
@@ -35,12 +35,36 @@ namespace CaixaEletronico
             conta2.titularCartao.Nome = "Mario";
             conta2.Deposita(760.0);
             conta2.Numero = 2;
-                       
+
+            Conta conta3 = new Conta();
+            conta3.titularCartao = new Cliente();
+            conta3.titularCartao.Nome = "Yoshi";
+            conta3.Deposita(130.0);
+            conta3.Numero = 3;
+
+            Conta conta4 = new Conta();
+            conta4.titularCartao = new Cliente();
+            conta4.titularCartao.Nome = "Peach";
+            conta4.Deposita(99999.0);
+            conta4.Numero = 4;
+
+            Conta conta5 = new Conta();
+            conta5.titularCartao = new Cliente();
+            conta5.titularCartao.Nome = "Toad";
+            conta5.Deposita(9999999.0);
+            conta5.Numero = 5;
+
             this.ListaConta[0] = conta1;
             this.ListaConta[1] = conta2;
+            this.ListaConta[2] = conta3;
+            this.ListaConta[3] = conta4;
+            this.ListaConta[4] = conta5;
 
             cbContas.Items.Add(ListaConta[0].titularCartao.Nome);
             cbContas.Items.Add(ListaConta[1].titularCartao.Nome);
+            cbContas.Items.Add(ListaConta[2].titularCartao.Nome);
+            cbContas.Items.Add(ListaConta[3].titularCartao.Nome);
+            cbContas.Items.Add(ListaConta[4].titularCartao.Nome);
         }
 
         private void button1_Click(object sender, EventArgs e)
