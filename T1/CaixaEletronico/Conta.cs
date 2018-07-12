@@ -10,9 +10,9 @@ namespace CaixaEletronico
     {
         public int Numero { get; set; }
         public Cliente titularCartao { get; set; }
-        public double Saldo { get; private set; }
+        public double Saldo { get; protected set; }
 
-        public void Deposita(double valor)
+        public virtual void Deposita(double valor)
         {
             if (valor > 0)
             {
@@ -21,7 +21,7 @@ namespace CaixaEletronico
 
         }
 
-        public bool Saca(double saque)
+        public virtual bool Saca(double saque)
         {
             if (saque > this.Saldo || saque < 0)
             {
