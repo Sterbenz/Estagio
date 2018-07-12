@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.tbTitular = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbNumeroConta = new System.Windows.Forms.TextBox();
@@ -41,25 +40,18 @@
             this.tbSacar = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cbContas = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 143);
+            this.button1.Location = new System.Drawing.Point(45, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Realizar deposito";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tbTitular
-            // 
-            this.tbTitular.Location = new System.Drawing.Point(45, 40);
-            this.tbTitular.Name = "tbTitular";
-            this.tbTitular.ReadOnly = true;
-            this.tbTitular.Size = new System.Drawing.Size(110, 20);
-            this.tbTitular.TabIndex = 1;
             // 
             // label1
             // 
@@ -107,7 +99,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 78);
+            this.label4.Location = new System.Drawing.Point(73, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 7;
@@ -115,7 +107,7 @@
             // 
             // tbDeposito
             // 
-            this.tbDeposito.Location = new System.Drawing.Point(45, 104);
+            this.tbDeposito.Location = new System.Drawing.Point(45, 101);
             this.tbDeposito.Name = "tbDeposito";
             this.tbDeposito.Size = new System.Drawing.Size(110, 20);
             this.tbDeposito.TabIndex = 8;
@@ -123,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(222, 78);
+            this.label5.Location = new System.Drawing.Point(222, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 7;
@@ -131,14 +123,14 @@
             // 
             // tbSacar
             // 
-            this.tbSacar.Location = new System.Drawing.Point(183, 104);
+            this.tbSacar.Location = new System.Drawing.Point(183, 101);
             this.tbSacar.Name = "tbSacar";
             this.tbSacar.Size = new System.Drawing.Size(110, 20);
             this.tbSacar.TabIndex = 8;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(183, 142);
+            this.button2.Location = new System.Drawing.Point(183, 139);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 23);
             this.button2.TabIndex = 9;
@@ -148,19 +140,30 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(318, 142);
+            this.button3.Location = new System.Drawing.Point(318, 101);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 23);
             this.button3.TabIndex = 10;
-            this.button3.Text = "button3";
+            this.button3.Text = "Total nas contas";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // cbContas
+            // 
+            this.cbContas.BackColor = System.Drawing.SystemColors.Window;
+            this.cbContas.FormattingEnabled = true;
+            this.cbContas.Location = new System.Drawing.Point(45, 39);
+            this.cbContas.Name = "cbContas";
+            this.cbContas.Size = new System.Drawing.Size(110, 21);
+            this.cbContas.TabIndex = 11;
+            this.cbContas.SelectedIndexChanged += new System.EventHandler(this.cbContas_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 183);
+            this.ClientSize = new System.Drawing.Size(460, 255);
+            this.Controls.Add(this.cbContas);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tbSacar);
@@ -172,7 +175,6 @@
             this.Controls.Add(this.tbNumeroConta);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbTitular);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -186,7 +188,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox tbTitular;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbNumeroConta;
@@ -198,6 +199,7 @@
         private System.Windows.Forms.TextBox tbSacar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cbContas;
     }
 }
 
