@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisiveisPor3", "Divisivei
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomaNãoMultiplosDe3", "SomaNãoMultiplosDe3\SomaNãoMultiplosDe3.csproj", "{DA110805-518D-4935-97A0-C497929FFA3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletronico", "CaixaEletronico\CaixaEletronico.csproj", "{3A078DF1-4ED6-429B-99DF-A39E7005E126}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{DA110805-518D-4935-97A0-C497929FFA3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA110805-518D-4935-97A0-C497929FFA3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA110805-518D-4935-97A0-C497929FFA3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
