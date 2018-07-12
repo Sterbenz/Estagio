@@ -78,6 +78,5 @@ namespace CaixaEletronico
             tbNumeroConta.Text = Convert.ToString(this.conta.Numero);
             tbSaldo.Text = Convert.ToString(this.conta.Saldo);
         }
-
     }
 }
