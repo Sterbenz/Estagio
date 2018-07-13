@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class Conta
+    public abstract class  Conta
     {
         public int Numero { get; set; }
-        public Cliente titularCartao { get; set; }
+        public Cliente TitularCartao { get; set; }
         public double Saldo { get; protected set; }
 
         public virtual void Deposita(double valor)
@@ -29,7 +29,7 @@ namespace CaixaEletronico
             }
             else
             {
-                if (this.titularCartao.ehMaiorDeIdade())
+                if (this.TitularCartao.ehMaiorDeIdade())
                 {
                     this.Saldo -= saque;
                     return true;
