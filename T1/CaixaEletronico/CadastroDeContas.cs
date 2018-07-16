@@ -21,14 +21,35 @@ namespace CaixaEletronico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta newConta = new ContaCorrente();
-            newConta.TitularCartao = new Cliente();
-            newConta.TitularCartao.Nome = tbCadTit.Text;
-            newConta.Numero = Convert.ToInt32(tbCadNum.Text);
-            newConta.Deposita(Convert.ToDouble(tbCadSald.Text));
-            this.Visible = false;
+            Conta newConta = null;
+            if(cbCadTCon.Text == "Poupança")
+            {
+                newConta = new ContaPoupanca();
+                newConta.TitularCartao = new Cliente();
+                newConta.TitularCartao.Nome = tbCadTit.Text;
+                newConta.Numero = Convert.ToInt32(tbCadNum.Text);
+                newConta.Deposita(Convert.ToDouble(tbCadSald.Text));
 
+            }
+            else
+            {
+                newConta = new ContaCorrente();
+                newConta.TitularCartao = new Cliente();
+                newConta.TitularCartao.Nome = tbCadTit.Text;
+                newConta.Numero = Convert.ToInt32(tbCadNum.Text);
+                newConta.Deposita(Convert.ToDouble(tbCadSald.Text));
+            }
+            
+            
+
+            this.Visible = false;
             this.aplicacaoPadrao.adicionarConta(newConta);
+        }
+
+        private void CadastroDeContas_Load(object sender, EventArgs e)
+        {
+            cbCadTCon.Items.Add("Poupança");
+            cbCadTCon.Items.Add("Corrente");
         }
     }
 }

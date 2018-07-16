@@ -69,5 +69,10 @@ namespace CaixaEletronico
             return rendimento;
 
         }
+        public override string ToString()
+        {
+            return TitularCartao.Nome;
+        }
+
     }
 }

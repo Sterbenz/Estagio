@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.cs" />
     <Compile Include="CadastroDeContas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +55,12 @@
     <Compile Include="Conta.cs" />
     <Compile Include="ContaCorrente.cs" />
     <Compile Include="ContaPoupanca.cs" />
+    <Compile Include="DeletarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletarConta.Designer.cs">
+      <DependentUpon>DeletarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +72,9 @@
     <Compile Include="TotalizadorDeContas.cs" />
     <EmbeddedResource Include="CadastroDeContas.resx">
       <DependentUpon>CadastroDeContas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeletarConta.resx">
+      <DependentUpon>DeletarConta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
