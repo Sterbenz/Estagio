@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}</ProjectGuid>
+    <ProjectGuid>{2B6AA98B-4EBC-4126-88A1-900002E93868}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Editor</RootNamespace>
     <AssemblyName>Editor</AssemblyName>
@@ -77,9 +77,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="entrada.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
