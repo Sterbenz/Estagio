@@ -13,7 +13,7 @@ namespace CaixaEletronico
     public partial class Form1 : Form
     {
         
-        public Conta[] ListaConta { get; private set; }
+        public Conta[] ListaConta { get; private set; }     
         private int quantidadeDeContas = 5;
         public Form1()
         {

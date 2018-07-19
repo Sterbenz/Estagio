@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulario", "Formulario\Formulario.csproj", "{C64E052E-D428-4F7C-B1DF-89451D86A84C}"
 EndProject
@@ -29,7 +29,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SomaNãoMultiplosDe3", "Som
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletronico", "CaixaEletronico\CaixaEletronico.csproj", "{3A078DF1-4ED6-429B-99DF-A39E7005E126}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaAlura", "LojaAlura\LojaAlura.csproj", "{7BE5896D-C516-4BEB-8522-BC39D6BEBAF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,10 +89,10 @@ Global
 		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A078DF1-4ED6-429B-99DF-A39E7005E126}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C562B99F-B3EA-4F98-AC27-610E6C34C6E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE5896D-C516-4BEB-8522-BC39D6BEBAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE5896D-C516-4BEB-8522-BC39D6BEBAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE5896D-C516-4BEB-8522-BC39D6BEBAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE5896D-C516-4BEB-8522-BC39D6BEBAF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
