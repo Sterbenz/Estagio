@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/styletext.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/styleimage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form>
+        <label>Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control" onblur="validaN()">
+        <br>
+        <label>Sobrenome:</label>
+        <input type="text" name="sobrenome" id="sobrenome" class="form-control" onblur="validaS()">
+        <br>
+        <label>CPF:</label>
+        <input type="text" name="cpf" id="cpf" class="form-control" onblur="validaCPF()" maxlength="11">
+        <br>
+        <input type="button" name="cadastrar" value="Cadastrar" class="form-control btn btn-primary">
+        <br>
+        <input type="reset" name="reset" value="Limpar" class="form-control">
+    </form>
+    <script>
+        function validaCPF() {
+            var cpf = document.getElementById("cpf").value;
+            var result = 0;
+            var result2 = 0;
+            var R = 0;
+            var R2 = 0;
+            var N = 10;
+            var N2 = 11;
+            for (var i = 0; i < cpf.length - 2; i++) {
+                result += (cpf.charAt(i) * N);
+                N -= 1;
+            }
+            R = (result * 10) % 11;
+            if (R == 10) {
+                R = 0;
+                if (R == cpf.charAt(9)) {
+                    document.getElementById("cpf").className = "form-control is-valid";
+                } else {
+                    document.getElementById("cpf").className = "form-control is-invalid";
+                }
+            } else {
+                if (R == cpf.charAt(9)) {
+                    for (var i = 0; i < cpf.length - 1; i++) {
+                        result2 += (cpf.charAt(i) * N2);
+                        N2 -= 1;
+                    }
+                    R2 = (result2 * 10) % 11;
+                    if (R2 == 10) {
+                        R2 = 0;
+                        if (R2 == cpf.charAt(10)) {
+                            document.getElementById("cpf").className = "form-control is-valid";
+                        } else {
+                            document.getElementById("cpf").className = "form-control is-invalid";
+                        }
+                    } else {
+                        if (R2 == cpf.charAt(10)) {
+                            document.getElementById("cpf").className = "form-control is-valid";
+                        } else {
+                            document.getElementById("cpf").className = "form-control is-invalid";
+                        }
+
+                    }
+                } else {
+                    document.getElementById("cpf").className = "form-control is-invalid";
+                }
+            }
+        }
+
+
+        function validaN() {
+            var nome = document.getElementById("nome").value;
+
+            if (validaNome(nome)) {
+
+                document.getElementById("nome").className = "form-control is-valid";
+            } else {
+
+                document.getElementById("nome").className = "form-control is-invalid";
+            }
+        }
+
+        function validaS() {
+            var sobrenome = document.getElementById("sobrenome").value;
+            if (validaNome(sobrenome)) {
+                document.getElementById("sobrenome").className = "form-control is-valid";
+            } else {
+                document.getElementById("sobrenome").className = "form-control is-invalid";
+            }
+
+        }
+
+        function validaI() {
+            var idade = document.getElementById("idade").value;
+            idade = parseInt(idade);
+            if (idade >= 16) {
+                document.getElementById("idade").className = "form-control is-valid";
+            } else {
+                document.getElementById("idade").className = "form-control is-invalid";
+            }
+        }
+
+
+        function validaNome(palavra) {
+            if (palavra.length >= 3 && (!(contemNumero(palavra)))) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function contemNumero(palavra) {
+            for (var i = 0; i < palavra.length; i++) {
+                if (
+                    (palavra.charAt(i) == "0") ||
+                    (palavra.charAt(i) == "1") ||
+                    (palavra.charAt(i) == "2") ||
+                    (palavra.charAt(i) == "3") ||
+                    (palavra.charAt(i) == "4") ||
+                    (palavra.charAt(i) == "5") ||
+                    (palavra.charAt(i) == "6") ||
+                    (palavra.charAt(i) == "7") ||
+                    (palavra.charAt(i) == "8") ||
+                    (palavra.charAt(i) == "9")
+                ) {
+                    return true
+                }
+            }
+            return false
+        }
+
+    </script>
+</body>
+
+</html>
