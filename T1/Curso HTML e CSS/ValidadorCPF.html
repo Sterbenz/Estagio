@@ -18,14 +18,26 @@
         <input type="text" name="sobrenome" id="sobrenome" class="form-control" onblur="validaS()">
         <br>
         <label>CPF:</label>
-        <input type="text" name="cpf" id="cpf" class="form-control" onblur="validaCPF()" maxlength="11">
+        <input type="text" name="cpf" id="cpf" class="form-control" onblur="validaTamanhoCPF()" maxlength="11">
         <br>
         <input type="button" name="cadastrar" value="Cadastrar" class="form-control btn btn-primary">
         <br>
         <input type="reset" name="reset" value="Limpar" class="form-control">
     </form>
     <script>
+        
+
+        function validaTamanhoCPF() {
+            var cpf = document.getElementById("cpf").value;
+            if (cpf.length == 11) {
+                validaCPF();
+            } else {
+                document.getElementById("cpf").className = "form-control is-invalid";              
+            }
+        }
+
         function validaCPF() {
+            
             var cpf = document.getElementById("cpf").value;
             var result = 0;
             var result2 = 0;
@@ -33,6 +45,7 @@
             var R2 = 0;
             var N = 10;
             var N2 = 11;
+
             for (var i = 0; i < cpf.length - 2; i++) {
                 result += (cpf.charAt(i) * N);
                 N -= 1;
@@ -134,7 +147,6 @@
             }
             return false
         }
-
     </script>
 </body>
 
