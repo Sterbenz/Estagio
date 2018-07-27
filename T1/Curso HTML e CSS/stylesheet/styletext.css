@@ -1,22 +1,29 @@
-body{
-    font-family: "Crimson Text","Times New Roman",serif;
-    background-color: #F2FFFC;
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
     text-align: justify;
-    
+    line-height: 1.5;
 }
-main h1 {
+
+h1, h2 {
+	font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
+.titulo-principal  {
+	text-align: center;
+	background-color: #851944;
+	color: #FFF;
     font-size: 60px;
-    background-color: #851944;
-    color: white;
-    text-align: center;    
+    margin: 0px;
+    padding: 10px;
+    text-transform: uppercase;
+    border-bottom: 5px solid black;
 }
 
-h1,h2 {    
-    font-family: "Open Sans Condensed","Times New Roman",sans-serif;
-    }
-
-p{    
-    margin-right: 350px;
+p {
+	text-align: justify;
+    padding: 20px 0;
 }
 
 a{
@@ -26,43 +33,99 @@ a{
     font-family: "Open Sans Condensed","Times New Roman",sans-serif;
 }
 
-a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-    font-family: "Open Sans Condensed","Times New Roman",sans-serif;
+blockquote {
+	background-color: #D9E5E3;
+    padding: 20px;
+    border: 5px solid #C2CCCA;
+    width: 200px;
+    margin: 20px 40px;
+    box-sizing: border-box;
 }
 
-div.menu{
-    width: 210px;
-    height: 400px;
-    position: fixed;
-    right: 0px;
-    top: 0px;
+.navegacao-site{
+	background-color: #3C1D3D;    
+	color: #F2FFFC;
     text-align: center;
-    background-color: #3c1d3d;
 }
-img{
-    width: 150px;
-    margin-left: 50px;
+
+.rodape-pagina{
+	background-color: #000;
+	color: #F2FFFC;
+    padding: 20px;
 }
-div.menu,img.menu, main h1{
-    border: 5px solid black;
+
+.conteudo-principal a {
+	color: #851944;
 }
-div a, div h1{
-    color: #F2FFFC;
+
+.navegacao-site a {
+	color: inherit;
+	font-family: "Open Sans Condensed", sans-serif;
 }
-nav{
-    margin-top: 25px;
+
+.texto-pagina{
+    width: 720px;
+    margin: auto;
+    padding: 30px 0; 
 }
-div h1{
+
+.navegacao-site h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+h2 {
     font-size: 30px;
 }
 
-footer{
-    background-color: black;
-    color: #F2FFFC;    
+.icones-redes-sociais li {
+	display: inline-block;
 }
-blockquote{
-    background-color: #D9E5E3;
+
+
+.artigo{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.leia-mais{
+    font-size: 25px;
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    display: block;
+    background-color: #E6E7E8
+}
+
+nav a {
+	text-transform: lowercase;
+}
+
+.icones-redes-sociais a {
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-indent: -99999px;
+}
+
+.github {
+	background-image: url(../Src/github.png);
+}
+
+.twitter {
+	background-image: url(../Src/twitter.png);
+}
+
+.linkedin {
+	background-image: url(../Src/linkedin.png);
 }
