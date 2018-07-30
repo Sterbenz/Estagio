@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LojaAlura", "LojaAlura\LojaAlura.csproj", "{13261298-E919-4CF7-951A-7F79F802879C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inicial", "Inicial\Inicial.csproj", "{5104576D-A66D-467B-903B-90E442B51140}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{13261298-E919-4CF7-951A-7F79F802879C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13261298-E919-4CF7-951A-7F79F802879C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13261298-E919-4CF7-951A-7F79F802879C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5104576D-A66D-467B-903B-90E442B51140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5104576D-A66D-467B-903B-90E442B51140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5104576D-A66D-467B-903B-90E442B51140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5104576D-A66D-467B-903B-90E442B51140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
