@@ -8,6 +8,8 @@ body {
 
 h1, h2 {
 	font-family: "Open Sans Condensed", "Arial", sans-serif;
+    
+    
 }
 
 .titulo-principal  {
@@ -16,7 +18,7 @@ h1, h2 {
 	color: #FFF;
     font-size: 60px;
     margin: 0px;
-    padding: 10px;
+    padding: 10px;    
     text-transform: uppercase;
     border-bottom: 5px solid black;
 }
@@ -31,27 +33,38 @@ a{
     background-color: transparent; 
     text-decoration: none;
     font-family: "Open Sans Condensed","Times New Roman",sans-serif;
+    
 }
 
-blockquote {
+.petrobras {
 	background-color: #D9E5E3;
     padding: 20px;
     border: 5px solid #C2CCCA;
-    width: 200px;
+    width: 250px;
     margin: 20px 40px;
     box-sizing: border-box;
+    float: left;
 }
 
-.navegacao-site{
-	background-color: #3C1D3D;    
-	color: #F2FFFC;
-    text-align: center;
+.fiat{
+    background-color: #D9E5E3;
+    padding: 20px;
+    border: 5px solid #C2CCCA;
+    width: 250px;
+    margin: 20px 40px;
+    box-sizing: border-box;
+    float: right;
 }
 
 .rodape-pagina{
 	background-color: #000;
 	color: #F2FFFC;
-    padding: 20px;
+    padding: 10px;    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .conteudo-principal a {
@@ -85,6 +98,7 @@ em {
 
 h2 {
     font-size: 30px;
+    clear: both;
 }
 
 .icones-redes-sociais li {
@@ -104,7 +118,7 @@ h2 {
     margin: 15px;
     text-align: center;
     display: block;
-    background-color: #E6E7E8
+    background-color: #E6E7E8;
 }
 
 nav a {
@@ -128,4 +142,54 @@ nav a {
 
 .linkedin {
 	background-image: url(../Src/linkedin.png);
+}
+
+.navegacao-site, .menu{
+	background-color: #3C1D3D;    
+	color: #F2FFFC;
+    text-align: center;
+    float: right;   
+    box-sizing: border-box;
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.navegacao-site{
+    width: 15%; 
+    position: relative;
+    top: 220px;
+}
+
+.menu {
+    width: 220px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.conteudo-principal{
+    float: left;
+    width: 85%;
+    padding-bottom: 80px;
+}
+
+cite{
+    font-style: italic;    
+    float: right;
+}
+
+.portfolio li {
+    display: inline-block;
+    border: 8px solid black;
+    background-color: #FAFFFC;
+    width: 47%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.portfolio img {
+    width: 100%;
 }
