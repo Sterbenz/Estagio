@@ -4,6 +4,7 @@
 
 
 <form action="/Produto/Adiciona" method="post">
+    @Html.AntiForgeryToken()
 
     <label for="nome ">Nome:</label>
     @Html.ValidationMessage("produto.Nome")
