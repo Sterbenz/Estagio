@@ -6,18 +6,25 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    class Orcamento
+    public class Orcamento
     {
         public double Valor { get; private set; }
+        public IList<Item> Itens { get; private set; }
 
         public Orcamento(double valor)
         {
             this.Valor = valor;
+            this.Itens = new List<Item>();
         }
 
         public void Deposita(double valor)
         {
             this.Valor += valor;
+        }
+
+        public void AdicionaItens(Item item)
+        {
+            Itens.Add(item);
         }
     }
 }

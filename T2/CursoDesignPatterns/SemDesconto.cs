@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    class Conservador : Investimentos
+    public class SemDesconto : IDesconto
     {
-        public double Investe(Orcamento orcamento)
-        {
-            return orcamento.Valor * 0.08;
-        }
+        public IDesconto Proximo { get ; set; }
 
+        public double Desconta(Orcamento orcamento)
+        {
+            return 0;
+        }
     }
 }
