@@ -8,9 +8,12 @@ namespace CursoDesignPatterns
 {
     class ISS : Impostos
     {
-        public double Calcula(Orcamento orcamento)
+        public ISS(Impostos outroImposto) : base(outroImposto) { }
+        public ISS() : base() { }
+
+        public override double Calcula(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.06;
-        }
+            return orcamento.Valor * 0.06 + CalculoOutroImposto(orcamento);
+        }        
     }
 }

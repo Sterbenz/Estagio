@@ -15,6 +15,7 @@ namespace CursoDesignPatterns
             IDesconto d2 = new DescontoCompraMaiorQue500Reais();
             IDesconto d3 = new DescontoPorVendaCasada();
             IDesconto semDesconto = new SemDesconto();
+
             d1.Proximo = d2;
             d2.Proximo = d3;
             d3.Proximo = semDesconto;
