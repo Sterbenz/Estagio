@@ -13,7 +13,7 @@ namespace CursoDesignPatterns
         static void Main(string[] args)
         {
 
-            Impostos i = new ISS(new ICMS());
+            Impostos i = new ISS(new ImpostoMuitoAlto());
             Orcamento orcamento = new Orcamento(500);
 
             double valor = i.Calcula(orcamento);

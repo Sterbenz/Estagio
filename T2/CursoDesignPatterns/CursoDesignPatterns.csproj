@@ -53,6 +53,7 @@
     <Compile Include="ICPP.cs" />
     <Compile Include="IHIT.cs" />
     <Compile Include="IKCV.cs" />
+    <Compile Include="ImpostoMuitoAlto.cs" />
     <Compile Include="Impostos.cs" />
     <Compile Include="ISS.cs" />
     <Compile Include="Item.cs" />
