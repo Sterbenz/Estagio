@@ -8,8 +8,9 @@ namespace CursoDesignPatterns
 {
     public class Orcamento
     {
-        public double Valor { get; private set; }
+        public double Valor { get; set; }
         public IList<Item> Itens { get; private set; }
+        public EstadosDosOrcamentos EstadoAtual { get; set; }
 
         public Orcamento(double valor)
         {
@@ -25,6 +26,27 @@ namespace CursoDesignPatterns
         public void AdicionaItens(Item item)
         {
             Itens.Add(item);
+        }
+
+        public void AplicaDescontoExtra()
+        {
+            EstadoAtual.DescontoExtra(this);
+        }
+
+        public void Aprova()
+        {
+            EstadoAtual.Aprova(this);
+        }
+
+
+        public void Recusa()
+        {
+            EstadoAtual.Recusa(this);
+        }
+
+        public void Finaliza()
+        {
+            EstadoAtual.Finaliza(this);
         }
     }
 }
