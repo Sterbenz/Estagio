@@ -61,6 +61,9 @@
     <Compile Include="Impostos.cs" />
     <Compile Include="ISS.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="ItemDaNotaFiscal.cs" />
+    <Compile Include="NotaFiscal.cs" />
+    <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

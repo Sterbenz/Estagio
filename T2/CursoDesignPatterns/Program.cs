@@ -8,21 +8,24 @@ namespace CursoDesignPatterns
 {
     class Program
     {
-        
 
         static void Main(string[] args)
         {
 
-            Orcamento reforma = new Orcamento(500.0);
+            NotaFiscalBuilder criador = new NotaFiscalBuilder()
+                .ParaEmpresas("Caelum")
+                .ComCnpj("123.456.789/0001-10")
+                .ComItem(new ItemDaNotaFiscal("item 1", 100.0))
+                .ComItem(new ItemDaNotaFiscal("item 2", 200.0))
+                //.ComItem(new ItemDaNotaFiscal("item 3", 300.0))
+                .ComObservacoes("entregar nf pessoalmente")
+                .NaDataAtual();
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor); // imprime 475,00 pois descontou 5%
-            reforma.Aprova(); // aprova nota!
+            NotaFiscal nf = criador.Constroi();
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor); // imprime 465,50 pois descontou 2%
-
-            reforma.Finaliza();
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
+            Console.ReadKey();
 
         }
     }
