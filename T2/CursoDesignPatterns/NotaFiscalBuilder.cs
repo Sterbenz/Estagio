@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CursoDesignPatterns
 {
-    class NotaFiscalBuilder
+    public class NotaFiscalBuilder
     {
         private String RazaoSocial { get; set; }
         private String Cnpj { get; set; }
@@ -14,11 +14,23 @@ namespace CursoDesignPatterns
         public String Observacoes { get; set; }
         public DateTime Data { get; set; }
         private double Impostos { get; set; }
-        private IList<ItemDaNotaFiscal> TodosItens { get; set; } = new List<ItemDaNotaFiscal>();
-
+        private IList<ItemDaNotaFiscal> todosItens = new List<ItemDaNotaFiscal>();
+        private IList<AcoesPosNotaFiscal> todasAcoes = new List<AcoesPosNotaFiscal>();
         public NotaFiscal Constroi()
         {
-            return new NotaFiscal(RazaoSocial, Cnpj, Data, ValorBruto, Impostos, TodosItens, Observacoes);
+             NotaFiscal nf = new NotaFiscal(RazaoSocial, Cnpj, Data, ValorBruto, Impostos, todosItens, Observacoes);
+
+            foreach (AcoesPosNotaFiscal acao in todasAcoes)
+            {
+                acao.Executa(nf);
+            }
+
+            return nf;
+        }
+
+        public void AdicionaAcao(AcoesPosNotaFiscal acao)
+        {
+            todasAcoes.Add(acao);
         }
 
         public NotaFiscalBuilder ParaEmpresas(String razaoSocial)
@@ -50,7 +62,7 @@ namespace CursoDesignPatterns
 
         public NotaFiscalBuilder ComItem(ItemDaNotaFiscal item)
         {
-            TodosItens.Add(item);
+            todosItens.Add(item);
             ValorBruto += item.Valor;
             Impostos += item.Valor * 0.05;
 

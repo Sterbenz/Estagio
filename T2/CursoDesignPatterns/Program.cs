@@ -21,6 +21,10 @@ namespace CursoDesignPatterns
                 .ComObservacoes("entregar nf pessoalmente")
                 .NaDataAtual();
 
+            criador.AdicionaAcao(new EnviaEmail());
+            criador.AdicionaAcao(new NotaFiscalDAO());
+            criador.AdicionaAcao(new EnviaSms());
+
             NotaFiscal nf = criador.Constroi();
 
             Console.WriteLine(nf.ValorBruto);

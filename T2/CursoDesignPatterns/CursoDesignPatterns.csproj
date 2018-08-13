@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcoesPosNotaFiscal.cs" />
     <Compile Include="Aprovado.cs" />
     <Compile Include="CalculadorDeDesconto.cs" />
     <Compile Include="CalculadorDeImpostos.cs" />
@@ -50,6 +51,8 @@
     <Compile Include="DescontoMaisDe5Itens.cs" />
     <Compile Include="DescontoPorVendaCasada.cs" />
     <Compile Include="EmAprovacao.cs" />
+    <Compile Include="EnviaEmail.cs" />
+    <Compile Include="EnviaSms.cs" />
     <Compile Include="EstadosDosOrcamentos.cs" />
     <Compile Include="Finalizado.cs" />
     <Compile Include="ICCC.cs" />
@@ -64,6 +67,7 @@
     <Compile Include="ItemDaNotaFiscal.cs" />
     <Compile Include="NotaFiscal.cs" />
     <Compile Include="NotaFiscalBuilder.cs" />
+    <Compile Include="NotaFiscalDAO.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
