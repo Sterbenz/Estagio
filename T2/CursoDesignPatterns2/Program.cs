@@ -1,5 +1,6 @@
 ﻿using CursoDesignPatterns2.Cap1;
 using CursoDesignPatterns2.Cap2;
+using CursoDesignPatterns2.Cap4;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,40 +14,17 @@ namespace CursoDesignPatterns2
     {
         static void Main(string[] args)
         {
-            NotasMusicais notas = new NotasMusicais();
-            IList<INotas> musica = new List<INotas>
-            {
-                notas.Pega("do"),
-                notas.Pega("re"),
-                notas.Pega("mi"),
-                notas.Pega("fa"),
-                notas.Pega("fa"),
-                notas.Pega("fa"),
+            IExpressao esquerda = new Subtracao(new Numero(10), new Numero(1));
+            IExpressao direita = new Soma(new Numero(10), new Numero(0));
 
-                notas.Pega("do"),
-                notas.Pega("re"),
-                notas.Pega("do"),
-                notas.Pega("re"),
-                notas.Pega("re"),
-                notas.Pega("re"),
+            IExpressao conta = new Multiplicacao(esquerda, direita);
+            IExpressao conta2 = new RaizQuadrada(esquerda);
 
-                notas.Pega("do"),
-                notas.Pega("sol"),
-                notas.Pega("fa"),
-                notas.Pega("mi"),
-                notas.Pega("mi"),
-                notas.Pega("mi"),
-
-                notas.Pega("do"),
-                notas.Pega("re"),
-                notas.Pega("mi"),
-                notas.Pega("fa"),
-                notas.Pega("fa"),
-                notas.Pega("fa")
-            };
-
-            Piano piano = new Piano();
-            piano.Toca(musica);
+            int resultado = conta.Avalia();
+            int res = conta2.Avalia();
+            Console.WriteLine(resultado);
+            Console.WriteLine(res);
+            Console.ReadKey();
         }
     }
 }
