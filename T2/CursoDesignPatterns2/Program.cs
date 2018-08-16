@@ -1,4 +1,5 @@
 ﻿using CursoDesignPatterns2.Cap1;
+using CursoDesignPatterns2.Cap2;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,10 +13,40 @@ namespace CursoDesignPatterns2
     {
         static void Main(string[] args)
         {
-            IDbConnection conexao = new ConnectionFactory().GetConnection();
+            NotasMusicais notas = new NotasMusicais();
+            IList<INotas> musica = new List<INotas>
+            {
+                notas.Pega("do"),
+                notas.Pega("re"),
+                notas.Pega("mi"),
+                notas.Pega("fa"),
+                notas.Pega("fa"),
+                notas.Pega("fa"),
 
-            IDbCommand comando = conexao.CreateCommand();
-            comando.CommandText = "Drop database";
+                notas.Pega("do"),
+                notas.Pega("re"),
+                notas.Pega("do"),
+                notas.Pega("re"),
+                notas.Pega("re"),
+                notas.Pega("re"),
+
+                notas.Pega("do"),
+                notas.Pega("sol"),
+                notas.Pega("fa"),
+                notas.Pega("mi"),
+                notas.Pega("mi"),
+                notas.Pega("mi"),
+
+                notas.Pega("do"),
+                notas.Pega("re"),
+                notas.Pega("mi"),
+                notas.Pega("fa"),
+                notas.Pega("fa"),
+                notas.Pega("fa")
+            };
+
+            Piano piano = new Piano();
+            piano.Toca(musica);
         }
     }
 }
