@@ -20,5 +20,6 @@ namespace CursoDesignPatterns2.Cap4
         {
             return this.numero;
         }
+
     }
 }

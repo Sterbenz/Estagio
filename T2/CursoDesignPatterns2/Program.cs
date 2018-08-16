@@ -1,6 +1,7 @@
 ﻿using CursoDesignPatterns2.Cap1;
 using CursoDesignPatterns2.Cap2;
 using CursoDesignPatterns2.Cap4;
+using CursoDesignPatterns2.Cap6;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,17 +15,11 @@ namespace CursoDesignPatterns2
     {
         static void Main(string[] args)
         {
-            IExpressao esquerda = new Subtracao(new Numero(10), new Numero(1));
-            IExpressao direita = new Soma(new Numero(10), new Numero(0));
+            IEnvia enviador = new EnviaPorEmail();
+            IMensagem mensagem = new MensagemParaAdministracao("victor");
+            mensagem.Enviador = enviador;
 
-            IExpressao conta = new Multiplicacao(esquerda, direita);
-            IExpressao conta2 = new RaizQuadrada(esquerda);
-
-            int resultado = conta.Avalia();
-            int res = conta2.Avalia();
-            Console.WriteLine(resultado);
-            Console.WriteLine(res);
-            Console.ReadKey();
+            mensagem.Envia();
         }
     }
 }

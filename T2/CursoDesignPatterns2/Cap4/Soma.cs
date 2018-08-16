@@ -23,5 +23,6 @@ namespace CursoDesignPatterns2.Cap4
             int valorDireita = Direita.Avalia();
             return valorEsquerda + valorDireita;
         }
+
     }
 }
