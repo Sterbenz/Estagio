@@ -64,18 +64,22 @@
     <Compile Include="Cap4\RaizQuadrada.cs" />
     <Compile Include="Cap4\Soma.cs" />
     <Compile Include="Cap4\Subtracao.cs" />
-    <Compile Include="Cap6\EnviaPorEmail.cs" />
-    <Compile Include="Cap6\EnviaPorSms.cs" />
-    <Compile Include="Cap6\IEnvia.cs" />
-    <Compile Include="Cap6\IMensagem.cs" />
-    <Compile Include="Cap6\MensagemParaCliente.cs" />
-    <Compile Include="Cap6\MensagemParaAdministracao.cs" />
+    <Compile Include="Cap7\Fila.cs" />
+    <Compile Include="Cap7\FinalizaPedido.cs" />
+    <Compile Include="Cap7\IComando.cs" />
+    <Compile Include="Cap7\PagaPedido.cs" />
+    <Compile Include="Cap7\Pedido.cs" />
+    <Compile Include="Cap7\Status.cs" />
+    <Compile Include="Cap8\Cliente.cs" />
+    <Compile Include="Cap8\GeradorXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Cap9\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

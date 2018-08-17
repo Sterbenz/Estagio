@@ -1,7 +1,8 @@
 ﻿using CursoDesignPatterns2.Cap1;
 using CursoDesignPatterns2.Cap2;
 using CursoDesignPatterns2.Cap4;
-using CursoDesignPatterns2.Cap6;
+using CursoDesignPatterns2.Cap7;
+using CursoDesignPatterns2.Cap8;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,11 +16,15 @@ namespace CursoDesignPatterns2
     {
         static void Main(string[] args)
         {
-            IEnvia enviador = new EnviaPorEmail();
-            IMensagem mensagem = new MensagemParaAdministracao("victor");
-            mensagem.Enviador = enviador;
+            Cliente cliente = new Cliente();
 
-            mensagem.Envia();
+            cliente.Nome = "Caio";
+            cliente.Endereco = "Rua Chapeco";
+            cliente.DataDeNascimento = DateTime.Now;
+
+            String xml = new GeradorXml().GeraXml(cliente);
+            Console.WriteLine(xml);
+            Console.ReadKey();
         }
     }
 }
