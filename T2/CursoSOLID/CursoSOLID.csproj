@@ -42,17 +42,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculaSalario.cs" />
-    <Compile Include="Cargo.cs" />
-    <Compile Include="Dba.cs" />
-    <Compile Include="DescontoDeDezOuVintePorcento.cs" />
-    <Compile Include="DescontoDeQuinzeOuVinteCincoPorcento.cs" />
-    <Compile Include="Desenvolvedor.cs" />
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="IDescontos.cs" />
+    <Compile Include="Cap1\CalculaSalario.cs" />
+    <Compile Include="Cap1\Cargo.cs" />
+    <Compile Include="Cap1\Dba.cs" />
+    <Compile Include="Cap1\DescontoDeDezOuVintePorcento.cs" />
+    <Compile Include="Cap1\DescontoDeQuinzeOuVinteCincoPorcento.cs" />
+    <Compile Include="Cap1\Desenvolvedor.cs" />
+    <Compile Include="Cap1\Funcionario.cs" />
+    <Compile Include="Cap1\IDescontos.cs" />
+    <Compile Include="Cap2\EnviadorDeEmail.cs" />
+    <Compile Include="Cap2\Fatura.cs" />
+    <Compile Include="Cap2\GeradorNotaFiscal.cs" />
+    <Compile Include="Cap2\IAcaoPosGerarNota.cs" />
+    <Compile Include="Cap2\NotaFiscal.cs" />
+    <Compile Include="Cap2\NotaFiscalDao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tester.cs" />
+    <Compile Include="Cap1\Tester.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
