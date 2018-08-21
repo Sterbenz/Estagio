@@ -67,6 +67,9 @@
     <Compile Include="Cap4\MeioDePagamento.cs" />
     <Compile Include="Cap4\Pagamento.cs" />
     <Compile Include="Cap4\ProcessadorDeBoletos.cs" />
+    <Compile Include="Cap5\ContaComum.cs" />
+    <Compile Include="Cap5\ContaEstudante.cs" />
+    <Compile Include="Cap5\ManipuladorDeSaldo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Cap1\Tester.cs" />
